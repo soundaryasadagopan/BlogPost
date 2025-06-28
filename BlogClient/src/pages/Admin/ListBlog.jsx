@@ -37,6 +37,8 @@ const handleEdit = async(id)=>{
                     <thead className="text-xs text-gray-600 text-left uppercase">
                     <tr>
                         <th scope ="col" className='px-2 py-4 xl:px-6'>#</th>
+                        <th scope ="col" className='px-2 py-4'>Blog image</th>
+                        
                         <th scope ="col" className='px-2 py-4'>Blog title</th>
                         <th scope ="col" className='px-2 py-4 max-sm:hidden'>Blog category</th>
                         {/* <th scope ="col" className='px-2 py-4 max-sm:hidden'>Edit</th> */}
@@ -48,6 +50,7 @@ const handleEdit = async(id)=>{
                         {blogs.map((blog,index)=>(   
                         <tr key={index}>
                             <th className='px-2 py-4'>{index+1}</th>
+                            <td className='px-2 py-4'><img src={blog.image}className="w-24 h-auto object-cover rounded" alt=""/></td>
                             <td className='px-2 py-4'>{blog.title}</td>
                             <td className='px-2 py-4 max-sm:hidden'>{blog.category}</td>
                             <td className='px-2 py-4 flex text-xs gap-3'>

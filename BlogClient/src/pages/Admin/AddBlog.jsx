@@ -47,7 +47,7 @@ const AddBlog = () => {
         const response = await method(endpoint, formData);
          console.log(response,"response")
             if(response.data.success){
-                setImage(false);
+                setImage(null);
                 setTitle(" ")
                 setSubTitle(" ")
                 setCategory("Startup")
@@ -87,11 +87,11 @@ const AddBlog = () => {
       <p>upload thumbnail</p>
       <label htmlFor='image'>
        
-        <img src={!image? 
-            assets.upload_area
-      : typeof image === "string"
-      ? image
-      : URL.createObjectURL(image)} alt="" className='mt-2 h-16 rounded cursor-pointer'/>
+        <img src={image
+      ? typeof image === "string"
+        ? image
+        : URL.createObjectURL(image)
+      : assets.upload_area} alt="" className='mt-2 h-16 rounded cursor-pointer'/>
         <input type='file' onChange={(e)=>setImage(e.target.files[0])} hidden required={!image} id="image"/>
       </label>
 
