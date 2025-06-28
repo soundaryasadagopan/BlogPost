@@ -55,7 +55,7 @@ const handleEdit = async(id)=>{
                             <td className='px-2 py-4 max-sm:hidden'>{blog.category}</td>
                             <td className='px-2 py-4 flex text-xs gap-3'>
                                 <button className='cursor-pointer border rounded px-2 py-0.5 mt-1'onClick={()=>handleEdit(blog._id)}>Edit</button>
-                                {/* <button className='cursor-pointer border rounded px-2 py-0.5 mt-1'>Delete</button> */}
+                                
                                 <img src={assets.cross_icon} alt="" className='w-8 hover-scale-110 transition-all cursor-pointer' 
                                 onClick={()=>handleDelete(blog._id)}/>
 

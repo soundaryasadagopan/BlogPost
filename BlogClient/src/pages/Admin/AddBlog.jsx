@@ -131,14 +131,4 @@ const AddBlog = () => {
     </form>
   )
 }
-
- // setEditData({
-                // id:"",
-                //     title:"",
-                //     subTiltle:"",
-                //    category :"",
-                //    description:"",
-                //    ispublished:"",
-                //     // role:""
-                // })
 export default AddBlog

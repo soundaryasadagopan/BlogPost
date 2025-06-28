@@ -3,8 +3,6 @@ import { createContext } from 'react';
 import toast from 'react-hot-toast';
 import axios from "axios"
 
-
-// axios.defaults.baseURL =import.meta.env.VITE_BASE_URL;
 export const StoreContext = createContext(); 
 const StoreContextProvider = (props) => {
 
